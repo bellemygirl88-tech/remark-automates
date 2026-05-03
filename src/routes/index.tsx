@@ -157,7 +157,7 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="container mx-auto max-w-6xl px-4 mt-24">
+      <section className="container mx-auto max-w-6xl px-4 mt-24 reveal">
         <Card className="glass gradient-border rounded-3xl p-10 md:p-14 text-center relative overflow-hidden">
           <div className="absolute inset-0 mesh-bg opacity-50 pointer-events-none" />
           <div className="relative">
