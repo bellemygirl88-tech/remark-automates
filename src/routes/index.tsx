@@ -94,7 +94,7 @@ function HomePage() {
       </section>
 
       {/* Stats */}
-      <section className="container mx-auto max-w-6xl px-4 -mt-10 relative">
+      <section className="container mx-auto max-w-6xl px-4 -mt-10 relative reveal">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {STATS.map((s) => (
             <Card key={s.label} className="glass gradient-border rounded-2xl p-5">
@@ -106,7 +106,7 @@ function HomePage() {
       </section>
 
       {/* Summary */}
-      <section className="container mx-auto max-w-6xl px-4 mt-24">
+      <section className="container mx-auto max-w-6xl px-4 mt-24 reveal">
         <h2 className="text-3xl md:text-4xl font-bold">
           Building <span className="text-gradient-brand">automation systems</span> that work while you sleep.
         </h2>
@@ -142,7 +142,7 @@ function HomePage() {
       </section>
 
       {/* Tools marquee */}
-      <section className="container mx-auto max-w-6xl px-4 mt-20">
+      <section className="container mx-auto max-w-6xl px-4 mt-20 reveal">
         <div className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Tools & technologies</div>
         <div className="flex flex-wrap gap-2">
           {TOOLS.map((t) => (
@@ -157,7 +157,7 @@ function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="container mx-auto max-w-6xl px-4 mt-24">
+      <section className="container mx-auto max-w-6xl px-4 mt-24 reveal">
         <Card className="glass gradient-border rounded-3xl p-10 md:p-14 text-center relative overflow-hidden">
           <div className="absolute inset-0 mesh-bg opacity-50 pointer-events-none" />
           <div className="relative">
