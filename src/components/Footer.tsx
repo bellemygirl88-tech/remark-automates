@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Linkedin, Facebook } from "lucide-react";
 import { GradientLogo } from "./GradientLogo";
 
 export function Footer() {
@@ -32,8 +32,20 @@ export function Footer() {
                 <a href="tel:+639244640194" className="hover:text-foreground">+63 924-464-0194</a>
               </li>
               <li className="flex items-center gap-2">
+                <MessageCircle className="h-4 w-4 text-brand-violet" />
+                <a href="https://wa.me/639772727335" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">+63 977-272-7335 (WhatsApp)</a>
+              </li>
+              <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-brand-violet" />
                 <a href="mailto:gojoswcollab@gmail.com" className="hover:text-foreground">gojoswcollab@gmail.com</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Linkedin className="h-4 w-4 text-brand-violet" />
+                <a href="https://www.linkedin.com/in/remark-antipala-00b806355" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">LinkedIn</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Facebook className="h-4 w-4 text-brand-violet" />
+                <a href="https://www.facebook.com/share/1FwsP7RFCz/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Facebook</a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-brand-violet" />

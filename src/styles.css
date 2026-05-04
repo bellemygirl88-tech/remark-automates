@@ -72,25 +72,25 @@
 }
 
 .dark {
-  /* Dark mode — deep navy/black base with vibrant gradient accents */
-  --background: oklch(0.13 0.03 270);
+  /* Dark mode — Scale-AI inspired: deep near-black with vibrant red/violet auroras */
+  --background: oklch(0.10 0.02 270);
   --foreground: oklch(0.98 0.01 280);
-  --card: oklch(0.18 0.04 270);
+  --card: oklch(0.14 0.03 270);
   --card-foreground: oklch(0.98 0.01 280);
-  --popover: oklch(0.16 0.04 270);
+  --popover: oklch(0.12 0.03 270);
   --popover-foreground: oklch(0.98 0.01 280);
   --primary: oklch(0.7 0.22 25);
-  --primary-foreground: oklch(0.13 0.03 270);
-  --secondary: oklch(0.24 0.05 270);
+  --primary-foreground: oklch(0.10 0.02 270);
+  --secondary: oklch(0.20 0.04 270);
   --secondary-foreground: oklch(0.98 0.01 280);
-  --muted: oklch(0.22 0.04 270);
-  --muted-foreground: oklch(0.7 0.04 280);
-  --accent: oklch(0.28 0.08 280);
+  --muted: oklch(0.18 0.03 270);
+  --muted-foreground: oklch(0.72 0.03 280);
+  --accent: oklch(0.24 0.07 280);
   --accent-foreground: oklch(0.98 0.01 280);
   --destructive: oklch(0.7 0.2 22);
   --destructive-foreground: oklch(0.98 0.01 280);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 10%);
   --ring: oklch(0.7 0.2 25);
 
   --brand-violet: oklch(0.68 0.26 25);
