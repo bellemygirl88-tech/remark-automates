@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2, MessageCircle, Linkedin, Facebook } from "lucide-react";
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -44,10 +44,28 @@ const CONTACT_INFO = [
     href: "tel:+639244640194",
   },
   {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "+63 977-272-7335",
+    href: "https://wa.me/639772727335",
+  },
+  {
     icon: Mail,
     label: "Email",
     value: "gojoswcollab@gmail.com",
     href: "mailto:gojoswcollab@gmail.com",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "remark-antipala",
+    href: "https://www.linkedin.com/in/remark-antipala-00b806355",
+  },
+  {
+    icon: Facebook,
+    label: "Facebook",
+    value: "Remark Antipala",
+    href: "https://www.facebook.com/share/1FwsP7RFCz/",
   },
   {
     icon: MapPin,
