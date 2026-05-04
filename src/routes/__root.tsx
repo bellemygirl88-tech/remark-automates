@@ -50,7 +50,7 @@ export const Route = createRootRoute({
           "Automation Specialist building AI agents, CRM systems, funnels, and websites with n8n, Zapier, GoHighLevel, and OpenAI.",
       },
       { name: "author", content: "Remark Antipala" },
-      { property: "og:title", content: "Remark Antipala — Automation & AI Specialist" },
+      { property: "og:title", content: "Remark Antipala — Automation Specialist & AI Integration Expert" },
       {
         property: "og:description",
         content:
@@ -58,6 +58,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Remark Antipala — Automation Specialist & AI Integration Expert" },
+      { name: "description", content: "A portfolio website builder with dynamic sections, dark/light mode, and interactive elements." },
+      { property: "og:description", content: "A portfolio website builder with dynamic sections, dark/light mode, and interactive elements." },
+      { name: "twitter:description", content: "A portfolio website builder with dynamic sections, dark/light mode, and interactive elements." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/76f28314-3924-4745-920e-8fe3744698be/id-preview-8c1792ef--75bc5a44-b7f3-4408-87a6-f782a68b4cfa.lovable.app-1777859302086.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/76f28314-3924-4745-920e-8fe3744698be/id-preview-8c1792ef--75bc5a44-b7f3-4408-87a6-f782a68b4cfa.lovable.app-1777859302086.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
