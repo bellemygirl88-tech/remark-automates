@@ -15,6 +15,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CertificationsRouteImport } from './routes/certifications'
+import { Route as BookRouteImport } from './routes/book'
 import { Route as IndexRouteImport } from './routes/index'
 
 const WorkRoute = WorkRouteImport.update({
@@ -47,6 +48,11 @@ const CertificationsRoute = CertificationsRouteImport.update({
   path: '/certifications',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BookRoute = BookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -55,6 +61,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/book': typeof BookRoute
   '/certifications': typeof CertificationsRoute
   '/contact': typeof ContactRoute
   '/experience': typeof ExperienceRoute
@@ -64,6 +71,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/book': typeof BookRoute
   '/certifications': typeof CertificationsRoute
   '/contact': typeof ContactRoute
   '/experience': typeof ExperienceRoute
@@ -74,6 +82,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/book': typeof BookRoute
   '/certifications': typeof CertificationsRoute
   '/contact': typeof ContactRoute
   '/experience': typeof ExperienceRoute
@@ -85,6 +94,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/book'
     | '/certifications'
     | '/contact'
     | '/experience'
@@ -94,6 +104,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/book'
     | '/certifications'
     | '/contact'
     | '/experience'
@@ -103,6 +114,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/book'
     | '/certifications'
     | '/contact'
     | '/experience'
@@ -113,6 +125,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BookRoute: typeof BookRoute
   CertificationsRoute: typeof CertificationsRoute
   ContactRoute: typeof ContactRoute
   ExperienceRoute: typeof ExperienceRoute
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CertificationsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/book': {
+      id: '/book'
+      path: '/book'
+      fullPath: '/book'
+      preLoaderRoute: typeof BookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -177,6 +197,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BookRoute: BookRoute,
   CertificationsRoute: CertificationsRoute,
   ContactRoute: ContactRoute,
   ExperienceRoute: ExperienceRoute,
@@ -187,3 +208,12 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
