@@ -43,59 +43,59 @@
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0.875rem;
 
-  /* Light mode — soft off-white base, same brand gradient */
+  /* Light mode — soft off-white with violet brand */
   --background: oklch(0.985 0.005 280);
   --foreground: oklch(0.18 0.04 280);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.18 0.04 280);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.04 280);
-  --primary: oklch(0.58 0.24 25);
+  --primary: oklch(0.55 0.22 290);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.95 0.02 290);
   --secondary-foreground: oklch(0.22 0.06 290);
   --muted: oklch(0.95 0.015 285);
   --muted-foreground: oklch(0.45 0.04 280);
-  --accent: oklch(0.94 0.04 200);
+  --accent: oklch(0.94 0.04 290);
   --accent-foreground: oklch(0.2 0.05 280);
   --destructive: oklch(0.6 0.24 27);
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(0.9 0.02 290);
   --input: oklch(0.9 0.02 290);
-  --ring: oklch(0.6 0.22 25);
+  --ring: oklch(0.6 0.22 290);
 
-  --brand-violet: oklch(0.58 0.24 25);
-  --brand-cyan: oklch(0.72 0.20 45);
-  --brand-magenta: oklch(0.55 0.27 10);
+  --brand-violet: oklch(0.62 0.24 290);
+  --brand-cyan: oklch(0.72 0.18 240);
+  --brand-magenta: oklch(0.62 0.26 320);
 }
 
 .dark {
-  /* Dark mode — Scale-AI inspired: deep near-black with vibrant red/violet auroras */
-  --background: oklch(0.10 0.02 270);
-  --foreground: oklch(0.98 0.01 280);
-  --card: oklch(0.14 0.03 270);
-  --card-foreground: oklch(0.98 0.01 280);
-  --popover: oklch(0.12 0.03 270);
-  --popover-foreground: oklch(0.98 0.01 280);
-  --primary: oklch(0.7 0.22 25);
-  --primary-foreground: oklch(0.10 0.02 270);
-  --secondary: oklch(0.20 0.04 270);
-  --secondary-foreground: oklch(0.98 0.01 280);
-  --muted: oklch(0.18 0.03 270);
-  --muted-foreground: oklch(0.72 0.03 280);
-  --accent: oklch(0.24 0.07 280);
-  --accent-foreground: oklch(0.98 0.01 280);
-  --destructive: oklch(0.7 0.2 22);
-  --destructive-foreground: oklch(0.98 0.01 280);
+  /* Dark mode — Scale-AI inspired: deep midnight navy with violet/indigo auroras */
+  --background: oklch(0.12 0.04 275);
+  --foreground: oklch(0.97 0.01 280);
+  --card: oklch(0.16 0.045 275);
+  --card-foreground: oklch(0.97 0.01 280);
+  --popover: oklch(0.14 0.045 275);
+  --popover-foreground: oklch(0.97 0.01 280);
+  --primary: oklch(0.72 0.22 290);
+  --primary-foreground: oklch(0.10 0.04 275);
+  --secondary: oklch(0.22 0.05 275);
+  --secondary-foreground: oklch(0.97 0.01 280);
+  --muted: oklch(0.20 0.04 275);
+  --muted-foreground: oklch(0.74 0.03 280);
+  --accent: oklch(0.28 0.09 290);
+  --accent-foreground: oklch(0.97 0.01 280);
+  --destructive: oklch(0.68 0.22 22);
+  --destructive-foreground: oklch(0.97 0.01 280);
   --border: oklch(1 0 0 / 8%);
   --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.7 0.2 25);
+  --ring: oklch(0.72 0.22 290);
 
-  --brand-violet: oklch(0.68 0.26 25);
-  --brand-cyan: oklch(0.78 0.20 45);
-  --brand-magenta: oklch(0.62 0.28 10);
+  --brand-violet: oklch(0.72 0.24 290);
+  --brand-cyan: oklch(0.78 0.18 240);
+  --brand-magenta: oklch(0.68 0.28 320);
 }
 
 @layer base {
