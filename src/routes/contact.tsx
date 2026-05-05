@@ -147,8 +147,17 @@ function ContactPage() {
                   </div>
                 </Card>
               );
+              const isExternal = c.href?.startsWith("http");
               return c.href ? (
-                <a key={c.label} href={c.href} className="block">{inner}</a>
+                <a
+                  key={c.label}
+                  href={c.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  className="block"
+                >
+                  {inner}
+                </a>
               ) : (
                 <div key={c.label}>{inner}</div>
               );
