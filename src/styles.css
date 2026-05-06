@@ -233,6 +233,54 @@
     animation: ripple 0.6s ease-out;
   }
 
+  /* GHL UI — animated rainbow aurora overlay (inspired by GoHighLevel dashboard) */
+  .ghl-ui {
+    position: relative;
+    isolation: isolate;
+    background:
+      linear-gradient(
+        110deg,
+        oklch(0.72 0.18 240) 0%,
+        oklch(0.78 0.18 180) 18%,
+        oklch(0.82 0.20 140) 32%,
+        oklch(0.82 0.20 90) 48%,
+        oklch(0.72 0.24 40) 64%,
+        oklch(0.68 0.26 10) 80%,
+        oklch(0.62 0.28 330) 100%
+      );
+    background-size: 300% 300%;
+    animation: ghl-flow 12s ease-in-out infinite;
+    color: oklch(0.18 0.04 280);
+  }
+  .ghl-ui::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(60% 80% at 20% 30%, color-mix(in oklab, var(--brand-violet) 35%, transparent), transparent 60%),
+      radial-gradient(50% 70% at 80% 20%, color-mix(in oklab, var(--brand-magenta) 30%, transparent), transparent 60%),
+      radial-gradient(70% 80% at 50% 100%, color-mix(in oklab, var(--brand-cyan) 28%, transparent), transparent 65%);
+    mix-blend-mode: screen;
+    animation: ghl-aurora 14s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+  .ghl-ui > * {
+    position: relative;
+    z-index: 1;
+  }
+  .ghl-ui-sidebar {
+    background: linear-gradient(180deg, oklch(0.18 0.04 275), oklch(0.14 0.05 290));
+    color: oklch(0.97 0.01 280);
+  }
+  .ghl-ui-card {
+    background: color-mix(in oklab, white 55%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid color-mix(in oklab, white 25%, transparent);
+    border-radius: 0.75rem;
+  }
+
   /* Scroll reveal */
   .reveal {
     opacity: 0;
@@ -254,6 +302,16 @@
 @keyframes mesh-drift {
   0% { transform: scale(1) translate(0, 0); }
   100% { transform: scale(1.15) translate(2%, -2%); }
+}
+
+@keyframes ghl-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes ghl-aurora {
+  0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.85; }
+  100% { transform: translate3d(2%, -2%, 0) scale(1.1); opacity: 1; }
 }
 
 @keyframes ripple {
