@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Phone, MapPin, Send, Loader2, MessageCircle, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2, MessageCircle, Linkedin, Facebook, Instagram } from "lucide-react";
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
