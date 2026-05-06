@@ -48,6 +48,10 @@ export function Footer() {
                 <a href="https://www.facebook.com/share/1FwsP7RFCz/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Facebook</a>
               </li>
               <li className="flex items-center gap-2">
+                <Instagram className="h-4 w-4 text-brand-violet" />
+                <a href="https://www.instagram.com/mark_antipala" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Instagram</a>
+              </li>
+              <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-brand-violet" />
                 Lapu-Lapu City, Cebu, Philippines
               </li>
