@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin, MessageCircle, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Linkedin, Facebook, Instagram } from "lucide-react";
 import { GradientLogo } from "./GradientLogo";
 
 export function Footer() {
@@ -46,6 +46,10 @@ export function Footer() {
               <li className="flex items-center gap-2">
                 <Facebook className="h-4 w-4 text-brand-violet" />
                 <a href="https://www.facebook.com/share/1FwsP7RFCz/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Facebook</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Instagram className="h-4 w-4 text-brand-violet" />
+                <a href="https://www.instagram.com/mark_antipala" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">Instagram</a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-brand-violet" />
