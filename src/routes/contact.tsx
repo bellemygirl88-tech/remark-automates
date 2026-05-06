@@ -68,6 +68,12 @@ const CONTACT_INFO = [
     href: "https://www.facebook.com/share/1FwsP7RFCz/",
   },
   {
+    icon: Instagram,
+    label: "Instagram",
+    value: "@mark_antipala",
+    href: "https://www.instagram.com/mark_antipala",
+  },
+  {
     icon: MapPin,
     label: "Location",
     value: "Lapu-Lapu City, Cebu, Philippines",
