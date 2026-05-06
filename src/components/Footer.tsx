@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin, MessageCircle, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Linkedin, Facebook, Instagram } from "lucide-react";
 import { GradientLogo } from "./GradientLogo";
 
 export function Footer() {
