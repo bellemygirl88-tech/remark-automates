@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+import ghlUiVideo from "@/assets/portfolio/ghl-ui-1.mp4";
+import ghlFunnelVideo from "@/assets/portfolio/ghl-funnel.mp4";
 import ghlLeadCapture from "@/assets/portfolio/ghl-lead-capture.jpg";
 import ghlChatWidget from "@/assets/portfolio/ghl-chat-widget.jpg";
 import ghlInstagramDm from "@/assets/portfolio/ghl-instagram-dm.jpg";
@@ -36,7 +38,8 @@ export const Route = createFileRoute("/work")({
 });
 
 type Project = {
-  image: string;
+  image?: string;
+  video?: string;
   category: "GoHighLevel" | "Zapier" | "n8n";
   title: string;
   metric: string;
@@ -45,6 +48,24 @@ type Project = {
 };
 
 const PROJECTS: Project[] = [
+  {
+    video: ghlUiVideo,
+    category: "GoHighLevel",
+    title: "GHL UI Build & Customization",
+    metric: "Branded UI",
+    description:
+      "Custom GoHighLevel UI build — fully branded sub-account interface, navigation, dashboards, and white-labeled experience tailored to the client.",
+    tags: ["GHL", "UI", "White-label", "Branding"],
+  },
+  {
+    video: ghlFunnelVideo,
+    category: "GoHighLevel",
+    title: "GHL Funnel Design & Build",
+    metric: "High-converting",
+    description:
+      "End-to-end GoHighLevel funnel — designed, built, and wired with forms, automations, and follow-up sequences for conversion.",
+    tags: ["GHL", "Funnels", "Conversion", "Automation"],
+  },
   {
     image: ghlLeadCapture,
     category: "GoHighLevel",
@@ -172,12 +193,23 @@ function WorkPage() {
               className="glass gradient-border rounded-2xl overflow-hidden flex flex-col transition-transform hover:-translate-y-1"
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-card">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                />
+                {p.video ? (
+                  <video
+                    src={p.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                ) : (
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                )}
                 <div className="absolute top-3 left-3">
                   <Badge className="gradient-brand text-white border-0">{p.category}</Badge>
                 </div>
