@@ -304,6 +304,16 @@
   100% { transform: scale(1.15) translate(2%, -2%); }
 }
 
+@keyframes ghl-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes ghl-aurora {
+  0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.85; }
+  100% { transform: translate3d(2%, -2%, 0) scale(1.1); opacity: 1; }
+}
+
 @keyframes ripple {
   0% { width: 0; height: 0; opacity: 0.5; }
   100% { width: 500px; height: 500px; opacity: 0; }
